@@ -1,0 +1,3 @@
+[submodule "monorepo/coding-challenge-server"]
+	path = monorepo/coding-challenge-server
+	url = git@github.com:theabr-org/coding-challenge-server.git

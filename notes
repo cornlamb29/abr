@@ -28,3 +28,56 @@ httpClient.get('package.json', , {
 
 https://aurelia.io/docs/routing/configuration#basic-configuration
 
+
+
+
+- Better cache busting logic for data-service I am using a singleton to not repeat api calls.  Maybe a global data store in aurelia ecosystem is a better route
+- Is there away to catch errors and redirect to server error (oops page)
+- How to use navigation class.active bind attribute to determine active page
+- Not the best commenting could have adopted JSDoc syntax
+- due to time constraint best practice would be to have wrote unit test
+- due to time constraint not all variables are types like public, protected, private and interfaces or types for example for fish api call
+
+- what are generators and tasks in aurelia_project?
+- what are some best practice use of aurelia I may be missing in my project
+- what is a good source of use for resources configure function in src/resources/index.ts
+
+
+- Need to understand full the lifecyle events in Aurelia.  I know activate is for before page render and when you return a promise it will suspend next step to lifecyle until finished.
+  Attached gets called when view is already rendered
+
+
+kill all services running on a port
+lsof -t -i:5001 | xargs kill -9
+lsof -t -i:8080 | xargs kill -9
+
+
+
+echo "# abr" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:cornlamb29/abr.git
+git push -u origin main
+
+
+# submodules
+# add submodule
+git submodule add --force git@github.com:theabr-org/coding-challenge-server.git monorepo/coding-challenge-server
+git submodule update --init --recursive
+
+# remove cache form directory
+git rm --cached -r -f monorepo/coding-challenge-server
+
+# add submodule
+git add .gitmodules monorepo/coding-challenge-server
+
+# re-sync
+git submodule sync
+git submodule update --init --recursive
+
+
+
+
+
