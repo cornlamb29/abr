@@ -1,5 +1,6 @@
 <template>
   <require from="./app.css"></require>
+
   <header>
     <a href="/">
       <img src="/static/noaa.png" />
@@ -8,6 +9,7 @@
   </header>
 
   <main>
+
     <nav>
       <ul>
         <li class="${activePage === '/' ? 'active' : ''}">
@@ -25,10 +27,11 @@
         </li>
       </ul>
     </nav>
+
     <article>
       <router-view></router-view>
     </article>
-  </main>
 
+  </main>
 
 </template>

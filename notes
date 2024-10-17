@@ -43,7 +43,7 @@ https://aurelia.io/docs/routing/configuration#basic-configuration
 - what is a good source of use for resources configure function in src/resources/index.ts
 
 
-- Need to understand full the lifecyle events in Aurelia.  I know activate is for before page render and when you return a promise it will suspend next step to lifecyle until finished.
+- Need to understand full the lifecycle events in Aurelia.  I know activate is for before page render and when you return a promise it will suspend next step to lifecyle until finished.
   Attached gets called when view is already rendered
 
 

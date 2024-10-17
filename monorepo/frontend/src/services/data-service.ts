@@ -4,7 +4,7 @@ import { autoinject } from 'aurelia-framework'
 @autoinject
 export class DataService {
   public data
-  protected usedUri = {} // key value pair that stores data by uri so we dont requery
+  protected usedUri = {} // The key value pair that stores data by uri so we don't re-query.
   private apiKey: string = 'abrradiology'
 
   constructor(private httpClient: HttpClient) {

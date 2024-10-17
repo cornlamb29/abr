@@ -10,7 +10,7 @@ export class Home {
 
   public async activate(): Promise<void> {
     try {
-      // getting data to populate table with region info
+      // Getting data to populate table with region info.
       this.data = await this.dataService.getData('gofish')
     } catch (e) {
       console.log('Error:', e)

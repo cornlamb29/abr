@@ -6,14 +6,14 @@ error_exit() {
 }
 
 start_backend() {
-  cd monorepo/coding-challenge-server || error_exit "could go to backend service directory"
+  cd monorepo/coding-challenge-server || error_exit "could not go to backend service directory"
   npm install
   npm run start &
   cd - || error_exit "could not change directory back to original"
 }
 
 start_frontend() {
-  cd monorepo/frontend || error_exit "could go to frontend directory"
+  cd monorepo/frontend || error_exit "could not go to frontend directory"
   npm install
   #npx au run --watch &
   npx au run --open &

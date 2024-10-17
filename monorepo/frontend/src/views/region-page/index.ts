@@ -8,12 +8,12 @@ export class RegionPage {
 
   constructor(private dataService: DataService) { }
 
-  async activate(params) {
+  async activate(params): Promise<void> {
     try {
       const { name } = params
       const apiData = await this.dataService.getData('gofish')
 
-      // from the array of data from api make sure to get the row we want based on :region param in url
+      // From the array of data from api make sure to get the row we want based on :region param in url.
       this.data = apiData.find(f =>
         f.NOAAFisheriesRegion.toLowerCase().replace(' ', '-') === name
       )

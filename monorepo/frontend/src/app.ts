@@ -13,7 +13,7 @@ export class App {
 
   constructor(private dataService: DataService, private ea: EventAggregator) { }
 
-  // handle navigation and routing
+  // Handling navigation and routing.
   public async configureRouter(config, router) {
     config.title = 'NOAA Fisheries Region'
 
@@ -33,7 +33,7 @@ export class App {
       }
     ])
 
-    // catch all not found
+    // Catch all not found.
     config.mapUnknownRoutes({
       moduleId: PLATFORM.moduleName('views/not-found/index'),
       name: 'not-found'
@@ -43,16 +43,16 @@ export class App {
   }
 
   //https://stackoverflow.com/questions/40765848/detect-change-to-router-isnavigating
-  // when router is changing need to update what is new active page
+  // When router is changing need to update what is new active page.
   attached () {
     this.activePage = window.location.pathname.replace('/region/', '').replace('-', ' ')
-    this.ea.subscribe('router:navigation:processing', event => {
+    this.ea.subscribe('router:navigation:processing', () => {
       this.activePage = window.location.pathname.replace('/region/', '').replace('-', ' ')
     });
   }
 
   async activate () {
-    // needed to set navigation by iterating through dat from gofish api call
+    // Needed to set navigation by iterating through dat from gofish api call.
     try {
       return new Promise(async (resolve) => {
         this.navItems = await this.dataService.getData('gofish')
