@@ -8,7 +8,7 @@ The frontend service is using Aurelia with Typescript.  When executed the page s
 
 ## Start project
 
-To start project execute the base script below (after start servies make sure to go )
+To start project execute the base script below (after starting services make sure to go http://localhost:8080/)
 ```bash
 bash start-services.sh
 ```
@@ -40,4 +40,5 @@ lsof -t -i:8080 | xargs kill -9
 
 - Need to understand full the lifecyle events in Aurelia.  I know activate is for before page render and when you return a promise it will suspend next step to lifecyle until finished.
   Attached gets called when view is already rendered
+- Adding `coding-challenge-server` with submodules was not working for me.
 
