@@ -1,0 +1,34 @@
+<template>
+  <require from="./app.css"></require>
+  <header>
+    <a href="/">
+      <img src="/static/noaa.png" />
+      <h1>${title}</h1>
+    </a>
+  </header>
+
+  <main>
+    <nav>
+      <ul>
+        <li class="${activePage === '/' ? 'active' : ''}">
+          <a href="/">
+            Home Page
+          </a>
+        </li>
+        <li
+          repeat.for="nav of navItems"
+          class="${activePage === nav.NOAAFisheriesRegion.toLowerCase() ? 'active' : ''}"
+        >
+          <a href="/region/${nav.NOAAFisheriesRegion.toLowerCase().replace(' ', '-')}">
+            ${nav.NOAAFisheriesRegion}
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <article>
+      <router-view></router-view>
+    </article>
+  </main>
+
+
+</template>

@@ -1,0 +1,32 @@
+table {
+  border-collapse: collapse;
+}
+
+table thead tr th,
+table tbody tr th,
+table tbody tr td,
+table thead tr td {
+  border: 1px solid #ebedf3;
+  line-height: 20px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+table thead tr th,
+table tbody tr th {
+  background: #fbfbfb;
+}
+
+table tbody tr td,
+table tbody tr th {
+  vertical-align: top;
+}
+
+table tbody tr td table thead tr th {
+  vertical-align: middle;
+}
+
+table img {
+  width:150px;
+  height: auto;
+}

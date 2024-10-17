@@ -1,0 +1,52 @@
+<template>
+  <require from="./style.css"></require>
+  <require from="../../converters/arrayfilter"></require>
+  <h1>${title}</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Avg Calories</th>
+        <td>${data.CaloriesAvg}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Fat Per Serving</th>
+        <td>${data.FatAvg} g</td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+      <th>Fish</th>
+      <td>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>images</th>
+              <th>calories</th>
+              <th>fat per serving</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr repeat.for="fish of data.fishes">
+              <td>${fish.SpeciesName}</td>
+              <td>
+                <template if.bind="fish.ImageGallery | arrayfilter">
+                <template repeat.for="image of fish.ImageGallery">
+                  <img src="${image.src}" alt="${image.alt}" title="${image.title}" />
+                </template>
+                </template>
+              </td>
+              <td>${fish.Calories}</td>
+              <td>${fish.FatTotal}</td>
+              <td innerhtml="${fish.PhysicalDescription}"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</template>

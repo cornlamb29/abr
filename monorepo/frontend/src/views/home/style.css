@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+}
+
+table thead th,
+table tbody td {
+  border: 1px solid #ebedf3;
+  line-height: 20px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+table thead th {
+  background: #fbfbfb;
+}

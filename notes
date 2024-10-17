@@ -1,0 +1,30 @@
+gh repo clone theabr-org/coding-challenge-server
+git clone https://github.com/theabr-org/coding-challenge-server.git
+
+
+# aurelia getting started
+npm install -g @aurelia/cli
+
+# create project
+au new
+
+# start server
+au run --open
+
+
+https://aurelia.io/docs/plugins/http-services#aurelia-fetch-client
+import {HttpClient,json} from 'aurelia-http-client';
+
+let httpClient = new HttpClient();
+
+httpClient.get('package.json', , {
+   method: 'post',
+   body: json(body)
+ })
+  .then(data => {
+    console.log(data.description)
+  });
+
+
+https://aurelia.io/docs/routing/configuration#basic-configuration
+
