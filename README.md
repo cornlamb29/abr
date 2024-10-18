@@ -12,7 +12,7 @@ To start project execute the base script below (after starting services make sur
 ```bash
 bash start-services.sh
 ```
-_Also take not the script assumes that ports 5001 and 8080 are not in use if they are prior to running the script, it will fail._
+_Also take note the script assumes that ports 5001 and 8080 are not in use if they are prior to running the script, it will fail._
 
 ## Notes
 

@@ -22,7 +22,7 @@ export class RegionPage {
         this.title = this.data.NOAAFisheriesRegion
       }
     } catch (e) {
-      console.error(e)
+      console.error('Error:',e)
       throw e
     }
   }

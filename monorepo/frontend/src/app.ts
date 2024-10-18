@@ -23,13 +23,11 @@ export class App {
       {
         route: 'region/:name',
         moduleId: PLATFORM.moduleName('views/region-page/index'),
-        isActive: window.location.pathname.replace('/region', '') === ':name'
       },
       {
         route: '',
         name: 'home',
         moduleId: PLATFORM.moduleName('views/home/index'),
-        isActive: ['','/'].includes(window.location.pathname.replace('/region', ''))
       }
     ])
 
@@ -45,10 +43,15 @@ export class App {
   //https://stackoverflow.com/questions/40765848/detect-change-to-router-isnavigating
   // When router is changing need to update what is new active page.
   attached () {
-    this.activePage = window.location.pathname.replace('/region/', '').replace('-', ' ')
-    this.ea.subscribe('router:navigation:processing', () => {
+    try {
       this.activePage = window.location.pathname.replace('/region/', '').replace('-', ' ')
-    });
+      this.ea.subscribe('router:navigation:processing', () => {
+        this.activePage = window.location.pathname.replace('/region/', '').replace('-', ' ')
+      })
+    } catch(e) {
+      console.error('Error:',e)
+      throw e
+    }
   }
 
   async activate () {
@@ -59,7 +62,8 @@ export class App {
         resolve(this.navItems)
       })
     } catch (e) {
-      console.error(e)
+      console.error('Error:',e)
+      throw e
     }
   }
 }
