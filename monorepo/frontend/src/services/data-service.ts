@@ -80,4 +80,3 @@ export class DataService {
     }
   }
 }
-//class="${window.location.pathname === `/region/${nav.NOAAFisheriesRegion.toLowerCase().replace(' ', '-')}`}"

@@ -1,30 +1,78 @@
+.nutrition-facts {
+
+}
+
+span.nutrition-facts-wrapper {
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #f1f1f4;
+  box-shadow: 0 3px 5px #f1f1f4;
+  padding: 10px 20px;
+  margin: 0 20px 20px 0;
+}
+
+span.nutrition-facts-wrapper img {
+  margin-bottom: 10px;
+}
+
+span.nutrition-facts-wrapper span:first-child {
+  display: block;
+  font-size: 30px;
+}
+
+span.nutrition-facts-wrapper span:nth-child(2) {
+  display: block;
+  font-size: 13px;
+  color: #7f7e7b;
+  margin-bottom: 15px;
+}
+
+span.nutrition-facts-wrapper .badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 5px;
+}
+
+span.nutrition-facts-wrapper .badge.up {
+  background: #dfffe9;
+  color: #16c653;
+}
+
+span.nutrition-facts-wrapper .badge.down {
+  background: #ffeef3;
+  color: #f82759;
+}
+
+span.nutrition-facts-wrapper .badge span {
+  display: inline;
+  position: relative;
+  font-size: 10px;
+  top: -1px;
+}
+
 table {
   border-collapse: collapse;
 }
 
 table thead tr th,
-table tbody tr th,
-table tbody tr td,
-table thead tr td {
+table tbody tr td {
   border: 1px solid #ebedf3;
   line-height: 20px;
   padding: 10px 20px;
   margin: 0;
 }
 
-table thead tr th,
-table tbody tr th {
+table thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background: #fbfbfb;
 }
 
-table tbody tr td,
-table tbody tr th {
+table tbody tr td {
   vertical-align: top;
 }
 
-table tbody tr td table thead tr th {
-  vertical-align: middle;
-}
 
 table img {
   width:150px;
